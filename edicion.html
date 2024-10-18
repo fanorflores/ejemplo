@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    
 </head>
 
 <body>
@@ -34,10 +37,60 @@
     </div>
     <section>
         <article>
-            <form action="otracosa.html">
-                <label for="inputname">Nombres:</label>
-                <input type="text" name="names" id="names" placeholder="Juan Perez">
-            </form>
+            <div class="container px-5 my-5">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="#">
+                    <div class="mb-3">
+                        <label class="form-label" for="nombres">Nombres</label>
+                        <input class="form-control" id="nombres" type="text" placeholder="Nombres" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="nombres:required">Nombres is required.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="apellidos">Apellidos</label>
+                        <input class="form-control" id="apellidos" type="text" placeholder="Apellidos" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="apellidos:required">Apellidos is required.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="emailAddress">Email Address</label>
+                        <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" required" />
+                        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label d-block">New Field 6</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="hombre" type="radio" name="newField6" data-sb-validations="" />
+                            <label class="form-check-label" for="hombre">Hombre</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="mujer" type="radio" name="newField6" data-sb-validations="" />
+                            <label class="form-check-label" for="mujer">Mujer</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="prefieroNoDecirlo" type="radio" name="newField6" data-sb-validations="" />
+                            <label class="form-check-label" for="prefieroNoDecirlo">Prefiero No decirlo</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="activo" type="checkbox" name="activo" />
+                            <label class="form-check-label" for="activo">Activo</label>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            <p>To activate this form, sign up at</p>
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <div class="d-grid">
+                        <input class="btn btn-primary" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
         </article>
     </section>
     <footer style="padding-top: 200px;">
@@ -58,6 +111,11 @@
         </div>
     </footer>
 
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-</html>
+    </body>
+    
+    </html>
